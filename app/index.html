@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>lizToDo</title>
+    <title>To Do List</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -18,25 +18,97 @@
     <!-- endbuild -->
 
   </head>
-  <body>
+<body>
+<div class="wrap">
+    <h1>todos</h1>
+    <div class="tasklist">
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
+        <form action="" class="addNew">
+        <span class="icon">
+          <input type="text" class="todoEntry" placeholder="What needs to be done?" />
+        </span>
+      </form>
 
-        <li>Sass</li>
+      <ul class="list">
 
-
-
-
-        <li>UnderscoreJS</li>
 
       </ul>
-      <p>Don't forget to update your readme file!!</p>
     </div>
+
+
+    </div>
+
+<!-- <div class="task-list">
+  <ul>
+    <li>
+      <img id="check" class="check-button" width="10px" src="images/check.png">
+       <span></span>
+      <img id="1" class="delete-button" width="10px" src="images/close.png">
+    </li>
+    <li>
+      <img id="check" class="check-button" width="10px" src="images/check.png">
+      <span></span>
+      <img id="1" class="delete-button" width="10px" src="images/close.png">
+    </li>
+    <li>
+      <img id="check" class="check-button" width="10px" src="images/check.png">
+      <span></span>
+      <img id="1" class="delete-button" width="10px" src="images/close.png">
+    </li>
+    <li>
+      <img id="check" class="check-button" width="10px" src="images/check.png">
+      <span></span>
+      <img id="1" class="delete-button" width="10px" src="images/close.png">
+    </li>
+  </ul>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+
+  <section>
+
+
+  </section>
+    <div class="block">
+        <form name="newPost">
+        <input type="text" class="title" name="title" placeholder="What needs to be done?"><br>
+
+
+
+      <form name="toDoList">
+        <input type="submit" class="check" value="X">
+        <input type="text" class="title" name="title" placeholder="test">
+        </textarea>
+        <input type="submit" class="check" value="X"><br>
+        <input type="submit" value="X">
+        <input type="text" class="title" name="title" placeholder="test">
+        </textarea>
+        <input type="submit" value="X">
+      </form>
+    </div>
+</div> -->
+<footer>
+  <nav>
+    <ul>
+      <li>1 item left</li>
+      <li><a href="">All</a></li>
+      <li><a href="">Active</a></li>
+      <li><a href="">Completed</a></li>
+      <li><button>Clear completed (1)</button></li>
+    </ul>
+  </nav>
+</footer>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -46,6 +118,7 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/templates.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
