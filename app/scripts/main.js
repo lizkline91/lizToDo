@@ -9,7 +9,6 @@ var todos = {
   url: "http://tiy-fee-rest.herokuapp.com/collections/liztodo",
 
   init: function () {
-    console.log('in the init function');
     this.initEvents();
     this.initStyling();
   },
@@ -20,13 +19,12 @@ var todos = {
 
   initEvents: function(){
 
-    console.log('in the initEvents function')
 
     $(".tasklist").on("submit", ".addNew", function (event) {
       event.preventDefault();
-      console.log('you clicked me');
       var newItem = {
         content: $(".todoEntry").val(),
+        active:true,
       };
 
       todos.createItem(newItem);
@@ -36,9 +34,19 @@ var todos = {
     $(".wrap").on("click", ".destroy", function (event) {
       event.preventDefault();
       var itemId = $(this).closest("p").data("itemid");
-      console.log(itemId);
       todos.deleteItem(itemId);
     });
+
+    $(".wrap").on("click", ".check", function(event){
+      $(this).closest("p").addClass("completed");
+      $(this).closest("p").removeClass("active");
+      var itemId = $(this).parent().data("itemid");
+      var updatedItem = {
+        item:$(this).parent().text(),
+        active:false,
+      };
+      toDos.updateItem(itemId, updatedItem);
+    })
   },
 
   render: function(template, data, $el){
